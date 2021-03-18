@@ -25,6 +25,8 @@ public class GamePanel extends javax.swing.JPanel {
     }
 
     public void paintComponent(Graphics g){
+        g.setColor(Color.BLACK);
+        g.fillRect(0,0,this.getWidth(), this.getHeight());
         g.setColor(Color.GREEN);
         draw_all_citizen(g);
     }
@@ -37,6 +39,7 @@ public class GamePanel extends javax.swing.JPanel {
 
             for (int j = 0; j < c_size; ++j){
                 g.fillRect(ctr.get_fam_member_x_pos(i, j), ctr.get_fam_member_y_pos(i,j), 2, 2);
+                System.out.println("print familie "+ i +" member " + j);
             }
         }
 
