@@ -12,6 +12,7 @@ public class Control {
     public static final int POSITON_X = 7;
     public static final int POSITON_Y = 8;
     public static final int HOME = 9;
+    public static final int ROLE = 10;
 
     public Point point = new Point(0,0);
     public Point des = new Point(20,1);
@@ -19,15 +20,15 @@ public class Control {
     ArrayList<Family> families = new ArrayList<>();
 
     public Control() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; ++i) {
             point.x = i * 10 +2;
             point.y = (i*2) * 10 +2;
             citizens.add(new Citizen(5, "w",point,"Leto"));
         }
-        citizens.get(3).edit_settler(GENDER, 0, "w");
-        citizens.get(3).edit_settler(AGE, citizens.get(3).get_int_from_settler(AGE) + 1, null);
-        families.add(new Family("Ziegler",citizens.get(0), citizens.get(1)));
-        families.get(0).add_to_family(citizens.get(3));
+        citizens.get(3).edit_settler(GENDER, 0, "w", null);
+        citizens.get(3).edit_settler(AGE, citizens.get(3).get_int_from_settler(AGE) + 1, null, null);
+        families.add(new Family("Ziegler",new String[]{"Mann", "Frau"},citizens.get(0), citizens.get(1)));
+        families.get(0).add_to_family(citizens.get(3), citizens.get(3).get_string_from_settler(ROLE));
         families.get(0).remove_from_family(citizens.get(0));
         citizens.get(2).move(des);
 

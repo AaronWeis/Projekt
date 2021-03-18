@@ -3,6 +3,7 @@ import java.awt.Point;
 public class Citizen {
     private String first_name;
     private String last_name;
+    private String family_role;
     private int moral;
     private int politics;
     private int job;
@@ -45,11 +46,12 @@ public class Citizen {
     }
 
     public String get_string_from_settler(int attribute) {
-        String name;
+
         switch (attribute) {
             case Control.NAME:
-                name = first_name + " " + last_name;
-                return name;
+                 return first_name + " " + last_name;
+            case Control.ROLE:
+                return family_role;
             case Control.GENDER:
                 if (gender.equals("m")) {
                     return "männlich";
@@ -59,13 +61,15 @@ public class Citizen {
                     return "divers";
                 }
         }
+
         return "unknown";
     }
 
-    public void edit_settler(int attribute, int amount, String text) {
+    public void edit_settler(int attribute, int amount, String text, String role) {
         switch (attribute) {
             case Control.FAMILY:
                 last_name = text;
+                family_role = role;
                 break;
             case Control.NAME:
                 first_name = text;
