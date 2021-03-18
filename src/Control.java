@@ -27,8 +27,8 @@ public class Control {
         }
         citizens.get(3).edit_settler(GENDER, 0, "w", null);
         citizens.get(3).edit_settler(AGE, citizens.get(3).get_int_from_settler(AGE) + 1, null, null);
-        families.add(new Family("Ziegler",new String[]{"Mann", "Frau"},citizens.get(0), citizens.get(1)));
-        families.get(0).add_to_family(citizens.get(3), citizens.get(3).get_string_from_settler(ROLE));
+        families.add(new Family("Ziegler",new String[]{"Man", "Woman"},citizens.get(0), citizens.get(1)));
+        families.get(0).add_to_family(citizens.get(3), "Kid");
         families.get(0).remove_from_family(citizens.get(0));
         citizens.get(2).move(des);
 

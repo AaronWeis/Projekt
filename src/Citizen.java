@@ -1,4 +1,6 @@
 import java.awt.Point;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Citizen {
     private String first_name;
@@ -12,6 +14,8 @@ public class Citizen {
     private int stress;
     private Point position;
     private Point home;
+    private Citizen[] parents = new Citizen[2];
+    private ArrayList<Citizen> children = new ArrayList<>();
 
     public Citizen(int age, String gender, Point position, String name) {
         position = new Point(position.x, position.y);
@@ -98,6 +102,15 @@ public class Citizen {
 
     public void react() {
 
+    }
+
+    public void set_parents(Citizen parent1, Citizen parent2){
+        parents[0] = parent1;
+        parents[1] = parent2;
+    }
+
+    public void set_kids(Citizen... kids){
+        children.addAll(Arrays.asList(kids));
     }
 
     public void move(Point destination) {
