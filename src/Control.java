@@ -20,18 +20,15 @@ public class Control {
     ArrayList<Family> families = new ArrayList<>();
 
     public Control() {
-        for (int i = 0; i < 5; ++i) {
-            point.x = i * 10 +2;
-            point.y = (i*2) * 10 +2;
-            citizens.add(new Citizen(5, "w",point,"Leto"));
-        }
-        citizens.get(3).edit_settler(GENDER, 0, "w", null);
-        citizens.get(3).edit_settler(AGE, citizens.get(3).get_int_from_settler(AGE) + 1, null, null);
-        families.add(new Family("Ziegler",new String[]{"Man", "Woman"},citizens.get(0), citizens.get(1)));
-        families.get(0).add_to_family(citizens.get(3), "Kid");
-        families.get(0).remove_from_family(citizens.get(0));
-        citizens.get(2).move(des);
-
+        citizens.add(new Citizen(32,"m",point,"Ralf"));
+        citizens.add(new Citizen(30,"w",new Point(0,1),"Ursula"));
+        citizens.add(new Citizen(6,"m",new Point(1,0),"Jack"));
+        families.add(new Family("Anderson",new String[]{"Vater","Mutter","Sohn"},citizens.get(0),citizens.get(1),citizens.get(2)));
+        citizens.get(2).set_parents(citizens.get(0), citizens.get(1));
+        citizens.get(0).set_spouse(citizens.get(1));
+        citizens.get(1).set_spouse(citizens.get(0));
+        citizens.get(0).set_kids(citizens.get(2));
+        citizens.get(1).set_kids(citizens.get(2));
     }
 
     public int get_fam_member_x_pos(int fam, int member){

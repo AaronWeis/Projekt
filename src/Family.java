@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Family {
     String family;
     private ArrayList<Citizen> members = new ArrayList<>();
+
     public Family(String name, String[] roles,Citizen... cits){
         family = name;
         for (int j = 0; j < cits.length; ++j){
@@ -19,10 +20,6 @@ public class Family {
     public void remove_from_family(Citizen citizen){
         citizen.edit_settler(Control.FAMILY, 0, "", "");
         members.remove(citizen);
-    }
-
-    public void print_family_tree(){
-
     }
 
     public int get_member_count(){
