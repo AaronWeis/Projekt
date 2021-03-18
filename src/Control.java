@@ -1,4 +1,5 @@
 import java.awt.Point;
+import java.util.ArrayList;
 
 public class Control {
     public static final int FAMILY = 0;
@@ -14,28 +15,28 @@ public class Control {
 
     public Point point = new Point(0,0);
     public Point des = new Point(20,1);
-    Citizen[] cits = new Citizen[5];
+    ArrayList<Citizen> citizens = new ArrayList<>();
     Family[] fams = new Family[2];
 
     public Control() {
         for (int i = 0; i < 5; i++) {
             point.x = i * 10 +2;
             point.y = (i*2) * 10 +2;
-            cits[i] = new Citizen(5 * i, "m", point, "Leto");
+            citizens.add(new Citizen(5, "w",point,"Leto"));
         }
-        cits[3].edit_settler(GENDER, 0, "w");
-        cits[3].edit_settler(AGE, cits[3].get_int_from_settler(AGE) + 1, null);
-        fams[0] = new Family(cits[0], cits[1], "Ziegler");
-        fams[0].add_to_family(cits[3]);
-        fams[0].remove_from_family(cits[0]);
-        cits[2].move(des);
-        print(cits);
+        citizens.get(3).edit_settler(GENDER, 0, "w");
+        citizens.get(3).edit_settler(AGE, citizens.get(3).get_int_from_settler(AGE) + 1, null);
+        fams[0] = new Family(citizens.get(0), citizens.get(1), "Ziegler");
+        fams[0].add_to_family(citizens.get(3));
+        fams[0].remove_from_family(citizens.get(0));
+        citizens.get(2).move(des);
+        print(citizens);
     }
 
-    public void print(Citizen cits[]) {
+    public void print(ArrayList<Citizen> citizens) {
         for (int i = 0; i < 5; i++) {
-            System.out.println("Siedler Nr." + (i+1) + "\nName: " + cits[i].get_string_from_settler(NAME) + "\nAlter: " + cits[i].get_int_from_settler(AGE));
-            System.out.println("Geschlecht: " + cits[i].get_string_from_settler(GENDER) + "\nPosition: " + cits[i].get_int_from_settler(POSITON_X) + "/" + cits[i].get_int_from_settler(POSITON_Y));
+            System.out.println("Siedler Nr." + (i+1) + "\nName: " + citizens.get(i).get_string_from_settler(NAME) + "\nAlter: " + citizens.get(i).get_int_from_settler(AGE));
+            System.out.println("Geschlecht: " + citizens.get(i).get_string_from_settler(GENDER) + "\nPosition: " + citizens.get(i).get_int_from_settler(POSITON_X) + "/" + citizens.get(i).get_int_from_settler(POSITON_Y));
             System.out.println("---");
         }
     }
