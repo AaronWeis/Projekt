@@ -17,6 +17,7 @@ public class GamePanel extends javax.swing.JPanel {
      */
     public GamePanel() {
         initComponents();
+        Control ctr = new Control();
     }
 
     public void paintComponent(Graphics g){
