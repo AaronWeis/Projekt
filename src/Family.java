@@ -21,4 +21,8 @@ public class Family {
         citizen.edit_settler(Control.FAMILY, 0, "");
         members.remove(citizen);
     }
+
+    public void print_family_tree(){
+
+    }
 }
