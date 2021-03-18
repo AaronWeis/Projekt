@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import java.awt.Graphics;
+import java.awt.*;
 
 /**
  *
@@ -12,15 +12,33 @@ import java.awt.Graphics;
  */
 public class GamePanel extends javax.swing.JPanel {
 
+    private Control ctr;
+
     /**
      * Creates new form GamePanel
      */
+
+
     public GamePanel() {
         initComponents();
-        Control ctr = new Control();
+        ctr = new Control();
     }
 
     public void paintComponent(Graphics g){
+        g.setColor(Color.GREEN);
+        draw_all_citizen(g);
+    }
+
+    private void draw_all_citizen(Graphics g){
+        int f_size = ctr.get_families_size();
+
+        for (int i = 0; i < f_size; ++i){
+            int c_size = ctr.families.get(i).get_member_count();
+
+            for (int j = 0; j < c_size; ++j){
+                g.fillRect(ctr.get_fam_member_x_pos(i, j), ctr.get_fam_member_y_pos(i,j), 2, 2);
+            }
+        }
 
     }
 

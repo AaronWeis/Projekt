@@ -34,5 +34,16 @@ public class Control {
 
     }
 
+    public int get_fam_member_x_pos(int fam, int member){
+        return families.get(fam).get_member(member).get_int_from_settler(POSITON_X);
+    }
+
+    public int get_fam_member_y_pos(int fam, int member){
+        return families.get(fam).get_member(member).get_int_from_settler(POSITON_Y);
+    }
+
+    public int get_families_size(){
+        return families.size();
+    }
 
 }
