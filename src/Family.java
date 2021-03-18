@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Family {
     String family;
-    ArrayList<Citizen> members = new ArrayList<>();
+    private ArrayList<Citizen> members = new ArrayList<>();
     public Family(String name, String[] roles,Citizen... cits){
         family = name;
         for (int j = 0; j < cits.length; ++j){
