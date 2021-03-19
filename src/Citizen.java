@@ -127,16 +127,12 @@ public class Citizen {
     private void upadte_life_state(){
         if(age < 4){
             life_state = "Baby";
-            return;
         }else if(age < 12){
             life_state = "Child";
-            return;
         }else if(age < 18){
             life_state = "Teenager";
-            return;
         }else if(age < 65){
             life_state = "Adult";
-            return;
         }else{
             life_state = "Pensioner";
         }
