@@ -8,7 +8,6 @@ public class Citizen {
     private String family_role;
     private int moral;
     private int politics;
-    private int job;
     private int age;
     private String gender;
     private String life_state = "";
@@ -18,6 +17,7 @@ public class Citizen {
     private Citizen[] parents = new Citizen[2];
     private ArrayList<Citizen> children = new ArrayList<>();
     private Citizen spouse;
+    private Profession job;
 
     public Citizen(int age, String gender, Point position, String name) {
         position = new Point(position.x, position.y);
@@ -28,7 +28,6 @@ public class Citizen {
         this.gender = gender;
         this.position = position;
         stress = 0;
-        job = 0;
         politics = 0;
         moral = 0;
         upadte_life_state();
@@ -40,8 +39,6 @@ public class Citizen {
                 return moral;
             case Control.AGE:
                 return age;
-            case Control.JOB:
-                return job;
             case Control.POLITIK:
                 return politics;
             case Control.POSITON_X:
@@ -86,9 +83,6 @@ public class Citizen {
                 break;
             case Control.POLITIK:
                 politics = amount;
-                break;
-            case Control.JOB:
-                job = amount;
                 break;
             case Control.GENDER:
                 gender = text;

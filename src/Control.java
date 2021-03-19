@@ -6,13 +6,12 @@ public class Control {
     public static final int NAME = 1;
     public static final int MORAL = 2;
     public static final int POLITIK = 3;
-    public static final int JOB = 4;
+    public static final int ROLE = 4;
     public static final int GENDER = 5;
     public static final int AGE = 6;
     public static final int POSITON_X = 7;
     public static final int POSITON_Y = 8;
     public static final int HOME = 9;
-    public static final int ROLE = 10;
 
     public Point point = new Point(3,13);
     public Point des = new Point(20,1);

@@ -1,7 +1,8 @@
 public abstract class Profession {
-    public int loan;
-    public double[] work_time = new double[2];
-    public abstract void work();
+    protected int loan;
+    protected String designation;
+    protected double[] work_time = new double[2];
+    protected abstract void work();
     public int get_loan(){
         return loan;
     }
@@ -15,5 +16,8 @@ public abstract class Profession {
                 return work_time[1] - work_time[0];
         }
         return -1.0;
+    }
+    public String get_designation(){
+        return designation;
     }
 }
