@@ -11,6 +11,7 @@ public class Citizen {
     private int job;
     private int age;
     private String gender;
+    private String life_state = "";
     private int stress;
     private Point position;
     private Point home;
@@ -30,6 +31,7 @@ public class Citizen {
         job = 0;
         politics = 0;
         moral = 0;
+        upadte_life_state();
     }
 
     public int get_int_from_settler(int attribute) {
@@ -121,4 +123,23 @@ public class Citizen {
     public void move(Point destination) {
         position = destination;
     }
+
+    private void upadte_life_state(){
+        if(age < 4){
+            life_state = "Baby";
+            return;
+        }else if(age < 12){
+            life_state = "Child";
+            return;
+        }else if(age < 18){
+            life_state = "Teenager";
+            return;
+        }else if(age < 65){
+            life_state = "Adult";
+            return;
+        }else{
+            life_state = "Pensioner";
+        }
+    }
+
 }
