@@ -14,15 +14,15 @@ public class Control {
     public static final int HOME = 9;
     public static final int ROLE = 10;
 
-    public Point point = new Point(0,0);
+    public Point point = new Point(3,13);
     public Point des = new Point(20,1);
     ArrayList<Citizen> citizens = new ArrayList<>();
     ArrayList<Family> families = new ArrayList<>();
 
     public Control() {
         citizens.add(new Citizen(32,"m",point,"Ralf"));
-        citizens.add(new Citizen(30,"w",new Point(0,1),"Ursula"));
-        citizens.add(new Citizen(6,"m",new Point(1,0),"Jack"));
+        citizens.add(new Citizen(30,"w",new Point(143,79),"Ursula"));
+        citizens.add(new Citizen(6,"m",new Point(32,123),"Jack"));
         families.add(new Family("Anderson",new String[]{"Vater","Mutter","Sohn"},citizens.get(0),citizens.get(1),citizens.get(2)));
         citizens.get(2).set_parents(citizens.get(0), citizens.get(1));
         citizens.get(0).set_spouse(citizens.get(1));
