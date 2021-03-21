@@ -23,6 +23,7 @@ public class GamePanel extends javax.swing.JPanel {
     //Ints for game purposes
     private int mouse_last_x = 0;
     private int mouse_last_y = 0;
+    private Point current_pos_mouse = new Point(0,0);
 
     //Ints for drawing purposes
     private int w = getWidth();
@@ -69,8 +70,8 @@ public class GamePanel extends javax.swing.JPanel {
                         game_is_running = true;
                     }
                 }else{
-                    null_point.x += getMousePosition().x - mouse_last_x; // verschieben der karte
-                    null_point.y += getMousePosition().y - mouse_last_y; // ---------"-----------
+                    null_point.x += getMousePosition().x - mouse_last_x; // verschieben der karte   |ändert die Position der root-Posotion auf der Karte.
+                    null_point.y += getMousePosition().y - mouse_last_y; // ---------"-----------   |
                 }
                 click_on_start = false;
             }
@@ -84,7 +85,7 @@ public class GamePanel extends javax.swing.JPanel {
             public void mouseExited(MouseEvent e) {
 
             }
-        }); // ziehen der Welt mit pressed und released möglich !! pressed pos nehmen und wo released wird, hinsetzen
+        });
         ctr = new Control();
     }
 
@@ -101,9 +102,15 @@ public class GamePanel extends javax.swing.JPanel {
         draw_background(g);
         draw_all_citizen(g);
         draw_last_pressed(g);
+        draw_cr_mouse_pos(g);
         if(!game_is_running) draw_start_menue(g);
 
         repaint();
+    }
+
+    private void draw_cr_mouse_pos(Graphics g){
+        g.setColor(Color.WHITE);
+        g.drawString("current Mouse position (" + current_pos_mouse.x +"|"+current_pos_mouse.y+")", 200, 20);
     }
 
     private void draw_background(Graphics g){
@@ -120,7 +127,7 @@ public class GamePanel extends javax.swing.JPanel {
             int c_size = ctr.families.get(i).get_member_count();
 
             for (int j = 0; j < c_size; ++j){
-                g.fillRect(ctr.get_fam_member_x_pos(i, j) + null_point.x, ctr.get_fam_member_y_pos(i,j) + null_point.y, 2, 2);
+                g.fillRect(ctr.get_fam_member_x_pos(i, j) + null_point.x, ctr.get_fam_member_y_pos(i,j) + null_point.y, 10, 10);
             }
         }
 
