@@ -29,6 +29,8 @@ public class GamePanel extends javax.swing.JPanel {
     private int h = getHeight();
     private int w_tenth = w / 10;
     private int h_tenth = h / 10;
+
+    private Point null_point = new Point(0,0);// wird auf die positionen addiert um die welt perr drag zu verschieben und so mehr von der Karte anzuschauen
     /**
      * Creates new form GamePanel
      */
@@ -66,6 +68,9 @@ public class GamePanel extends javax.swing.JPanel {
                             getMousePosition().x < w / 2 + w_tenth && getMousePosition().y < h / 2) {
                         game_is_running = true;
                     }
+                }else{
+                    null_point.x += getMousePosition().x - mouse_last_x; // verschieben der karte
+                    null_point.y += getMousePosition().y - mouse_last_y; // ---------"-----------
                 }
                 click_on_start = false;
             }
@@ -115,7 +120,7 @@ public class GamePanel extends javax.swing.JPanel {
             int c_size = ctr.families.get(i).get_member_count();
 
             for (int j = 0; j < c_size; ++j){
-                g.fillRect(ctr.get_fam_member_x_pos(i, j), ctr.get_fam_member_y_pos(i,j), 2, 2);
+                g.fillRect(ctr.get_fam_member_x_pos(i, j) + null_point.x, ctr.get_fam_member_y_pos(i,j) + null_point.y, 2, 2);
             }
         }
 
