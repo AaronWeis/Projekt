@@ -88,7 +88,7 @@ public class GamePanel extends javax.swing.JPanel {
 
             }
         });
-        this.addMouseMotionListener(new MouseAdapter() {
+        this.addMouseMotionListener(new MouseAdapter() {//https://docs.oracle.com/javase/7/docs/api/java/awt/event/MouseAdapter.html
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
