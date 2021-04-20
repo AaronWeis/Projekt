@@ -1,6 +1,7 @@
 import java.awt.Point;
 import java.util.ArrayList;
 
+
 public class Citizen {
     private class  Credentials{
         String first_name;
@@ -117,15 +118,42 @@ public class Citizen {
 
     }
 
+    public void remove_parents(int... parentIds){
+        for (int parentId: parentIds) {
+            if(parents.contains(parentId)){
+                int index = ProgramTools.getIndexOf(parentId, parents);
+                parents.remove(index);
+            }
+        }
+    }
+
     public void set_kids(int... kids){
         for (int kidID: kids) {
             children.add(kidID);
         }
     }
 
+    public void remove_kids(int... kidIds){
+        for(int kidID:kidIds){
+            if(children.contains(kidID)){
+                int index = ProgramTools.getIndexOf(kidID,children);
+                children.remove(index);
+            }
+        }
+    }
+
     public void set_spouse(int... spouses){
         for (int spouseID: spouses) {
             this.spouses.add(spouseID);
+        }
+    }
+
+    public void remove_spouse(int... spouseIds){
+        for(int spouseID:spouseIds){
+            if(spouses.contains(spouseID)){
+                int index = ProgramTools.getIndexOf(spouseID,spouses);
+                spouses.remove(index);
+            }
         }
     }
 
