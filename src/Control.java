@@ -23,11 +23,11 @@ public class Control {
         citizens.add(new Citizen(30,"w",new Point(143,79),"Ursula"));
         citizens.add(new Citizen(6,"m",new Point(32,123),"Jack"));
         families.add(new Family("Anderson",new String[]{"Vater","Mutter","Sohn"},citizens.get(0),citizens.get(1),citizens.get(2)));
-        citizens.get(2).set_parents(citizens.get(0), citizens.get(1));
-        citizens.get(0).set_spouse(citizens.get(1));
-        citizens.get(1).set_spouse(citizens.get(0));
-        citizens.get(0).set_kids(citizens.get(2));
-        citizens.get(1).set_kids(citizens.get(2));
+        citizens.get(2).set_parents(0, 1);
+        citizens.get(0).set_spouse(1);
+        citizens.get(1).set_spouse(0);
+        citizens.get(0).set_kids(2);
+        citizens.get(1).set_kids(2);
     }
 
     public int get_fam_member_x_pos(int fam, int member){
