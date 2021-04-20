@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b95e6edf-5767-436d-aca9-5a1b7a81b9ad" name="Default Changelist" comment="added parent-child relationship">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projekt/Citizen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekt/Citizen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projekt/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projekt/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Citizen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Citizen.java" afterDir="false" />
+    </list>
+    <list id="1313c12a-110f-495d-99f0-21e9d5f67226" name="Uncommitted changes before Update at 17.03.2021 16:14 [Default Changelist]" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="control_patch" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ptCZBtE2kUJNUZdE0wObLuQPOD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GameFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameFrame" />
+      <module name="Projekt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GameFrame" />
+        <item itemvalue="Application.GameFrame" />
+        <item itemvalue="Application.GameFrame" />
+        <item itemvalue="Application.GameFrame" />
+        <item itemvalue="Application.GameFrame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b95e6edf-5767-436d-aca9-5a1b7a81b9ad" name="Default Changelist" comment="" />
+      <changelist id="1313c12a-110f-495d-99f0-21e9d5f67226" name="Uncommitted changes before Update at 17.03.2021 16:14 [Default Changelist]" comment="" />
+      <created>1615993054297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615993054297</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add control">
+      <created>1616079107368</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616079107368</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add control">
+      <created>1616080072984</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616080072984</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added ArrayList to Control (families) and to Family (members)">
+      <created>1616080736631</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616080736631</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ad">
+      <created>1616080945364</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616080945364</updated>
+    </task>
+    <task id="LOCAL-00005" summary="configurated family">
+      <created>1616082728290</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616082728290</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added parent-child relationship">
+      <created>1616083773049</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616083773049</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add gitignore die erste">
+      <created>1616085383966</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616085383966</updated>
+    </task>
+    <task id="LOCAL-00008" summary="finished family-realtionships, but automatic method is still missing">
+      <created>1616086297431</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616086297431</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added life state and update method for it to Citizen.java">
+      <created>1616152022443</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616152022443</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added needed var/methods to profession and removed unneeded return statements in Citizen.upadte_life_state">
+      <created>1616152477615</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616152477615</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added new Class Craftsman and new get-methods in Profession.java">
+      <created>1616152994536</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616152994536</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added designation to Profession.java, added Classes Blacksmith and Tailor">
+      <created>1616153666473</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616153666473</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add control" />
+    <MESSAGE value="added ArrayList to Control (families) and to Family (members)" />
+    <MESSAGE value="ad" />
+    <MESSAGE value="configurated family" />
+    <MESSAGE value="added parent-child relationship" />
+    <MESSAGE value="add gitignore die erste" />
+    <MESSAGE value="finished family-realtionships, but automatic method is still missing" />
+    <MESSAGE value="added life state and update method for it to Citizen.java" />
+    <MESSAGE value="added needed var/methods to profession and removed unneeded return statements in Citizen.upadte_life_state" />
+    <MESSAGE value="added new Class Craftsman and new get-methods in Profession.java" />
+    <MESSAGE value="added designation to Profession.java, added Classes Blacksmith and Tailor" />
+    <option name="LAST_COMMIT_MESSAGE" value="added designation to Profession.java, added Classes Blacksmith and Tailor" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="154" key="#Project_Structure" timestamp="1615993063018">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="440" y="154" key="#Project_Structure/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1615993063018" />
+    <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615994381547">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1615994381547" />
+    <state x="765" y="286" key="#com.intellij.ide.util.MemberChooser" timestamp="1618908021731">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="765" y="286" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1618908021731" />
+    <state x="45" y="127" width="1736" height="976" key="DiffContextDialog" timestamp="1616084482747">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="45" y="127" width="1736" height="976" key="DiffContextDialog/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616084482747" />
+    <state x="836" y="466" key="Github.ShareDialog" timestamp="1616083824154">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="836" y="466" key="Github.ShareDialog/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616083824154" />
+    <state x="740" y="285" key="Github.UntrackedFilesDialog" timestamp="1615993489842">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="740" y="285" key="Github.UntrackedFilesDialog/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1615993489842" />
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1618908488670">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1618908488670" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1618908488669">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1618908488669" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1618908488669">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1618908488669" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1618908488670">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1618908488670" />
+    <state width="1877" height="396" key="GridCell.Tab.1.bottom" timestamp="1616086334143">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="396" key="GridCell.Tab.1.bottom/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616086334143" />
+    <state width="1877" height="396" key="GridCell.Tab.1.center" timestamp="1616086334142">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="396" key="GridCell.Tab.1.center/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616086334142" />
+    <state width="1877" height="396" key="GridCell.Tab.1.left" timestamp="1616086334142">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="396" key="GridCell.Tab.1.left/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616086334142" />
+    <state width="1877" height="396" key="GridCell.Tab.1.right" timestamp="1616086334143">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="396" key="GridCell.Tab.1.right/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616086334143" />
+    <state x="598" y="341" key="MultipleFileMergeDialog" timestamp="1616084419228">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="598" y="341" key="MultipleFileMergeDialog/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616084419228" />
+    <state x="461" y="225" key="SettingsEditor" timestamp="1618907812381">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="461" y="225" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1618907812381" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1616153675467">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616153675467" />
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618906839874">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1618906839874" />
+    <state x="748" y="293" key="git4idea.branch.GitSmartOperationDialog" timestamp="1616084411120">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="748" y="293" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616084411120" />
+    <state x="755" y="327" key="refactoring.ChangeSignatureDialog" timestamp="1618908023616">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="755" y="327" key="refactoring.ChangeSignatureDialog/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1618908023616" />
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1616085006259">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616085006259" />
+    <state x="790" y="371" key="svn.repositoryBrowser" timestamp="1616083833556">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="790" y="371" key="svn.repositoryBrowser/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616083833556" />
+    <state x="382" y="331" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1616084323413">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="382" y="331" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1616084323413" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Citizen" memberName="spouse" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

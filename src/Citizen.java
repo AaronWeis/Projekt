@@ -1,11 +1,16 @@
 import java.awt.Point;
+import java.sql.Struct;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Citizen {
-    private String first_name;
-    private String last_name;
-    private String family_role;
+    private class  Credentials{
+         String first_name;
+         String last_name;
+         String family_role;
+         Point address;
+    }
+    Credentials credentials;
     private int moral;
     private int politics;
     private int age;
@@ -20,10 +25,11 @@ public class Citizen {
     private Profession job;
 
     public Citizen(int age, String gender, Point position, String name) {
+        credentials = new Credentials();
         position = new Point(position.x, position.y);
         Point home = new Point(0,0);
-        first_name = name;
-        last_name = "";
+        credentials.first_name = name;
+        credentials.last_name = "";
         this.age = age;
         this.gender = gender;
         this.position = position;
@@ -53,9 +59,9 @@ public class Citizen {
 
         switch (attribute) {
             case Control.NAME:
-                 return first_name + " " + last_name;
+                 return credentials.first_name + " " + credentials.last_name;
             case Control.ROLE:
-                return family_role;
+                return credentials.family_role;
             case Control.GENDER:
                 if (gender.equals("m")) {
                     return "männlich";
@@ -69,14 +75,16 @@ public class Citizen {
         return "unknown";
     }
 
+    public Profession getProfession() { return job;}
+
     public void edit_settler(int attribute, int amount, String text, String role) {
         switch (attribute) {
             case Control.FAMILY:
-                last_name = text;
-                family_role = role;
+                credentials.last_name = text;
+                credentials.family_role = role;
                 break;
             case Control.NAME:
-                first_name = text;
+                credentials.first_name = text;
                 break;
             case Control.MORAL:
                 moral = amount;
