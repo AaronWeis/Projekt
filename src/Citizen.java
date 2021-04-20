@@ -9,6 +9,7 @@ public class Citizen {
         String family_role;
         Point address;
         int age;
+        int familyId;
     }
     Credentials credentials;
     private int moral;
@@ -24,6 +25,11 @@ public class Citizen {
     private Profession job;
 
     public Citizen(int age, String gender, Point position, String name) {
+        initComponents(age, gender, position, name);
+        upadte_life_state();
+    }
+
+    private void initComponents(int age, String gender, Point position, String name) {
         credentials = new Credentials();
         position = new Point(position.x, position.y);
         Point home = new Point(0,0);
@@ -38,7 +44,6 @@ public class Citizen {
         parents = new ArrayList<>();
         spouses = new ArrayList<>();
         children = new ArrayList<>();
-        upadte_life_state();
     }
 
     public int get_int_from_settler(int attribute) {

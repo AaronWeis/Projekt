@@ -143,7 +143,7 @@ public class GamePanel extends javax.swing.JPanel {
         w_tenth = w / 10;
         h_tenth = h / 10;
         draw_background(g);
-        draw_all_citizen(g);
+      //  draw_all_citizen(g);
         draw_last_pressed(g);
         draw_cr_mouse_pos(g);
         if(!game_is_running) draw_start_menue(g);
@@ -161,10 +161,10 @@ public class GamePanel extends javax.swing.JPanel {
         g.fillRect(0,0,this.getWidth(), this.getHeight());
     }
 
-    private void draw_all_citizen(Graphics g){
+ /*   private void draw_all_citizen(Graphics g){
         g.setColor(Color.GREEN);
 
-        int f_size = ctr.get_families_size();
+        int f_size = ctr.get_families_amount();
 
         for (int i = 0; i < f_size; ++i){
             int c_size = ctr.families.get(i).get_member_count();
@@ -175,7 +175,7 @@ public class GamePanel extends javax.swing.JPanel {
         }
 
     }
-
+*/
     private void draw_start_menue(Graphics g){
         if(click_on_start){
             g.setColor(Color.DARK_GRAY);

@@ -22,7 +22,7 @@ public class Control {
         citizens.add(new Citizen(32,"m",point,"Ralf"));
         citizens.add(new Citizen(30,"w",new Point(143,79),"Ursula"));
         citizens.add(new Citizen(6,"m",new Point(32,123),"Jack"));
-        families.add(new Family("Anderson",new String[]{"Vater","Mutter","Sohn"},citizens.get(0),citizens.get(1),citizens.get(2)));
+        families.add(new Family("Anderson",this));
         citizens.get(2).set_parents(0, 1);
         citizens.get(0).set_spouse(1);
         citizens.get(1).set_spouse(0);
@@ -30,6 +30,12 @@ public class Control {
         citizens.get(1).set_kids(2);
     }
 
+
+
+    public Citizen getCitizen(int index){
+        return citizens.get(index);
+    }
+/*
     public int get_fam_member_x_pos(int fam, int member){
         return families.get(fam).get_member(member).get_int_from_settler(POSITON_X);
     }
@@ -38,8 +44,16 @@ public class Control {
         return families.get(fam).get_member(member).get_int_from_settler(POSITON_Y);
     }
 
-    public int get_families_size(){
+    //WICHTIG: DELETE CITIZEN
+    public void deleteCitizen(int citizenId){
+        citizens.get(citizenId).get
+    }
+*/
+    public int get_families_amount(){
         return families.size();
+    }
+    public  Control getControl(){
+        return this;
     }
 
 }
