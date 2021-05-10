@@ -38,6 +38,7 @@ public class Citizen {
     private void initComponents(int age, String gender, Point position, String name) {
         credentials = new Credentials();
         attributes = new Attributes();
+        credentials.familyId = -1;
         this.position = position;
         Point home = new Point(0,0);
         credentials.first_name = name;

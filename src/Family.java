@@ -16,10 +16,10 @@ public class Family {
     }
 
     public void remove_from_family(int citizenId){
-        members.remove(citizenId);
         for (int memberId:members) {
 
         }
+        members.remove(citizenId);
     }
 
     public int get_member_count(){

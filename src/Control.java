@@ -35,18 +35,18 @@ public class Control {
     public Citizen getCitizen(int index){
         return citizens.get(index);
     }
-/*
+
     public int get_fam_member_x_pos(int fam, int member){
-        return families.get(fam).get_member(member).get_int_from_settler(POSITON_X);
+        return citizens.get(families.get(fam).get_member(member)).get_int_from_settler(POSITON_X);
     }
 
     public int get_fam_member_y_pos(int fam, int member){
-        return families.get(fam).get_member(member).get_int_from_settler(POSITON_Y);
+        return citizens.get(families.get(fam).get_member(member)).get_int_from_settler(POSITON_Y);
     }
-
+    /*
     //WICHTIG: DELETE CITIZEN
     public void deleteCitizen(int citizenId){
-        citizens.get(citizenId).get
+        citizens.get(citizenId).
     }
 */
     public int get_families_amount(){
