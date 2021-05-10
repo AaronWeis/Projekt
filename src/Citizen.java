@@ -3,44 +3,51 @@ import java.util.ArrayList;
 
 
 public class Citizen {
-    private class  Credentials{
+
+    private static class  Credentials{
         String first_name;
         String last_name;
         String family_role;
         Point address;
         int age;
+        String life_state;
         int familyId;
+        String gender;
     }
+    public static class Attributes{
+        int moral;
+        int politics;
+        int stress;
+        Profession job;
+    }
+
     Credentials credentials;
-    private int moral;
-    private int politics;
-    private String gender;
-    private String life_state = "";
-    private int stress;
+    Attributes attributes;
     private Point position;
     private Point home;
     private ArrayList<Integer> parents;
     private ArrayList<Integer> children;
     private ArrayList<Integer> spouses;
-    private Profession job;
+
 
     public Citizen(int age, String gender, Point position, String name) {
         initComponents(age, gender, position, name);
-        upadte_life_state();
+        update_life_state();
     }
 
     private void initComponents(int age, String gender, Point position, String name) {
         credentials = new Credentials();
+        attributes = new Attributes();
         this.position = position;
         Point home = new Point(0,0);
         credentials.first_name = name;
         credentials.last_name = "";
         credentials.age = age;
-        this.gender = gender;
+        credentials.gender = gender;
         this.position = position;
-        stress = 0;
-        politics = 0;
-        moral = 0;
+        attributes.stress = 0;
+        attributes.politics = 0;
+        attributes.moral = 0;
         parents = new ArrayList<>();
         spouses = new ArrayList<>();
         children = new ArrayList<>();
@@ -48,9 +55,9 @@ public class Citizen {
 
     public int get_int_from_settler(int attribute) {
         return switch (attribute) {
-            case Control.MORAL -> moral;
+            case Control.MORAL -> attributes.moral;
             case Control.AGE -> credentials.age;
-            case Control.POLITIK -> politics;
+            case Control.POLITIK -> attributes.politics;
             case Control.POSITON_X -> position.x;
             case Control.POSITON_Y -> position.y;
             default -> 0;
@@ -62,12 +69,12 @@ public class Citizen {
         return switch (attribute) {
             case Control.NAME -> credentials.first_name + " " + credentials.last_name;
             case Control.ROLE -> credentials.family_role;
-            case Control.GENDER -> gender;
+            case Control.GENDER -> credentials.gender;
             default -> "unknown";
         };
     }
 
-    public Profession getProfession() { return job;}
+    public Profession getProfession() { return attributes.job;}
 
     public void edit_settler(int attribute, int amount, String text, String role) {
         switch (attribute) {
@@ -76,9 +83,9 @@ public class Citizen {
                 credentials.family_role = role;
             }
             case Control.NAME -> credentials.first_name = text;
-            case Control.MORAL -> moral = amount;
-            case Control.POLITIK -> politics = amount;
-            case Control.GENDER -> gender = text;
+            case Control.MORAL -> attributes.moral = amount;
+            case Control.POLITIK -> attributes.politics = amount;
+            case Control.GENDER -> credentials.gender = text;
             case Control.AGE -> credentials.age = amount;
         }
     }
@@ -141,19 +148,19 @@ public class Citizen {
         position = destination;
     }
 
-    private void upadte_life_state(){
+    private void update_life_state(){
         if (credentials.age >= 4) {
             if(credentials.age < 12){
-                life_state = "Child";
+                credentials.life_state = "Child";
             }else if(credentials.age < 18){
-                life_state = "Teenager";
+                credentials.life_state = "Teenager";
             }else if(credentials.age < 65){
-                life_state = "Adult";
+                credentials.life_state = "Adult";
             }else{
-                life_state = "Pensioner";
+                credentials.life_state = "Pensioner";
             }
         } else {
-            life_state = "Baby";
+            credentials.life_state = "Baby";
         }
     }
 
