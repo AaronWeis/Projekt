@@ -31,7 +31,7 @@ public class Citizen {
 
     private void initComponents(int age, String gender, Point position, String name) {
         credentials = new Credentials();
-        position = new Point(position.x, position.y);
+        this.position = position;
         Point home = new Point(0,0);
         credentials.first_name = name;
         credentials.last_name = "";
@@ -47,64 +47,39 @@ public class Citizen {
     }
 
     public int get_int_from_settler(int attribute) {
-        switch (attribute) {
-            case Control.MORAL:
-                return moral;
-            case Control.AGE:
-                return credentials.age;
-            case Control.POLITIK:
-                return politics;
-            case Control.POSITON_X:
-                return position.x;
-            case Control.POSITON_Y:
-                return position.y;
-        }
-        return 0;
+        return switch (attribute) {
+            case Control.MORAL -> moral;
+            case Control.AGE -> credentials.age;
+            case Control.POLITIK -> politics;
+            case Control.POSITON_X -> position.x;
+            case Control.POSITON_Y -> position.y;
+            default -> 0;
+        };
     }
 
     public String get_string_from_settler(int attribute) {
 
-        switch (attribute) {
-            case Control.NAME:
-                 return credentials.first_name + " " + credentials.last_name;
-            case Control.ROLE:
-                return credentials.family_role;
-            case Control.GENDER:
-                if (gender.equals("m")) {
-                    return "männlich";
-                } else if (gender.equals("w")) {
-                    return "weiblich";
-                } else {
-                    return "divers";
-                }
-        }
-
-        return "unknown";
+        return switch (attribute) {
+            case Control.NAME -> credentials.first_name + " " + credentials.last_name;
+            case Control.ROLE -> credentials.family_role;
+            case Control.GENDER -> gender;
+            default -> "unknown";
+        };
     }
 
     public Profession getProfession() { return job;}
 
     public void edit_settler(int attribute, int amount, String text, String role) {
         switch (attribute) {
-            case Control.FAMILY:
+            case Control.FAMILY -> {
                 credentials.last_name = text;
                 credentials.family_role = role;
-                break;
-            case Control.NAME:
-                credentials.first_name = text;
-                break;
-            case Control.MORAL:
-                moral = amount;
-                break;
-            case Control.POLITIK:
-                politics = amount;
-                break;
-            case Control.GENDER:
-                gender = text;
-                break;
-            case Control.AGE:
-                credentials.age = amount;
-                break;
+            }
+            case Control.NAME -> credentials.first_name = text;
+            case Control.MORAL -> moral = amount;
+            case Control.POLITIK -> politics = amount;
+            case Control.GENDER -> gender = text;
+            case Control.AGE -> credentials.age = amount;
         }
     }
 
@@ -167,16 +142,18 @@ public class Citizen {
     }
 
     private void upadte_life_state(){
-        if(credentials.age < 4){
+        if (credentials.age >= 4) {
+            if(credentials.age < 12){
+                life_state = "Child";
+            }else if(credentials.age < 18){
+                life_state = "Teenager";
+            }else if(credentials.age < 65){
+                life_state = "Adult";
+            }else{
+                life_state = "Pensioner";
+            }
+        } else {
             life_state = "Baby";
-        }else if(credentials.age < 12){
-            life_state = "Child";
-        }else if(credentials.age < 18){
-            life_state = "Teenager";
-        }else if(credentials.age < 65){
-            life_state = "Adult";
-        }else{
-            life_state = "Pensioner";
         }
     }
 
